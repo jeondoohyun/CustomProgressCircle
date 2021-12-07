@@ -12,6 +12,7 @@ import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.View;
 
 import androidx.core.app.ActivityCompat;
 
@@ -24,6 +25,7 @@ public class ProgressBarCircularIndeterminate extends CustomView{
     int backgroundColor = Color.parseColor("#1E88E5");
     Context mContext;
     public static Canvas draw;
+    public boolean flag_progress_start = true;
 
     public ProgressBarCircularIndeterminate(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -70,7 +72,9 @@ public class ProgressBarCircularIndeterminate extends CustomView{
         if (cont > 0) {
             drawSecondAnimation(canvas);
         }
-        invalidate();   // invalidate()를 호출 하면 onDraw가 호출된다.
+        if (flag_progress_start) {
+            invalidate();   // invalidate()를 호출 하면 onDraw가 호출된다.
+        }
     }
 
     float pxTodp(int px) {
@@ -130,6 +134,16 @@ public class ProgressBarCircularIndeterminate extends CustomView{
         radius2 = 0;
         cont = 0;
         firstAnimationOver = false;
+    }
+
+    void startOrEndProgress() {
+        flag_progress_start = !flag_progress_start;
+        if (flag_progress_start) {
+            this.setVisibility(View.VISIBLE);
+        } else {
+            this.setVisibility(View.GONE);
+        }
+        invalidate();
     }
 
     int arcD = 0;

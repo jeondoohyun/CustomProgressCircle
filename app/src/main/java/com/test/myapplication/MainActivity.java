@@ -43,4 +43,8 @@ public class MainActivity extends AppCompatActivity {
 //        Log.e("수치",ani.draw+"");
         ani.click();
     }
+
+    public void startOrEndClick(View view) {
+        ani.startOrEndProgress();
+    }
 }
