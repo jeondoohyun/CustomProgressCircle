@@ -87,7 +87,6 @@ public class ProgressBarCircularIndeterminate extends CustomView{
     float radius2 = 0;
     int cont = 0;
     boolean firstAnimationOver = false;
-
     private void drawFirstAnimation(Canvas canvas) {
 //        Log.e("getwidth",pxTodp(getWidth())+"");
 //        Log.e("getwidth",getWidth()+"");
@@ -122,7 +121,15 @@ public class ProgressBarCircularIndeterminate extends CustomView{
         }
     }
     void click() {
-        invalidate();
+        arcD = 0;
+        arcO = 0;
+        power = 6;
+        rotateAngle = 0;
+        limite = 0;
+        radius1 = 0;
+        radius2 = 0;
+        cont = 0;
+        firstAnimationOver = false;
     }
 
     int arcD = 0;

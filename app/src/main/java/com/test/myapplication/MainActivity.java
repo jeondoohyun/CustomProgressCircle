@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         ani = (ProgressBarCircularIndeterminate) findViewById(R.id.ani);
     }// onCreate..
 
-    public void click(View view) {
+    public void resetClick(View view) {
 //        ani.drawSecondAnimation(can);
 //        Log.e("수치",ani.draw+"");
         ani.click();
