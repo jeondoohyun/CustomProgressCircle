@@ -3,24 +3,14 @@ package com.test.myapplication;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Canvas;
-import android.os.Build;
 import android.os.Bundle;
-import android.provider.Settings;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-
-import static java.lang.System.currentTimeMillis;
-
-public class MainActivity extends AppCompatActivity {
+public class CustomLoadingActivity extends AppCompatActivity {
 
     EditText et_1, et_2;
     TextView tv_result;
@@ -33,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_custom_loading);
 
         ani = (ProgressBarCircularIndeterminate) findViewById(R.id.ani);
     }// onCreate..
@@ -46,5 +36,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void startOrEndClick(View view) {
         ani.startOrEndProgress();
+    }
+
+    public void activityMove(View view) {
+        startActivity(new Intent(this, MaterialLoadingActivity.class));
     }
 }

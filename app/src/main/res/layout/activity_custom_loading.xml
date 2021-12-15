@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".CustomLoadingActivity">
 
 
 <!--    <EditText-->
@@ -34,20 +34,29 @@
     <com.test.myapplication.ProgressBarCircularIndeterminate
         android:id="@+id/ani"
         android:layout_width="35dp"
-        android:layout_height="35dp"
-        />
+        android:layout_height="35dp" />
 
     <Button
+        android:id="@+id/reset"
         android:text="리셋"
         android:onClick="resetClick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"/>
+        android:layout_below="@id/ani"/>
 
     <Button
+        android:id="@+id/startOrEnd"
         android:onClick="startOrEndClick"
         android:text="시작/종료"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reset"/>
 
-</LinearLayout>
+    <Button
+        android:onClick="activityMove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="material Loading"/>
+
+</RelativeLayout>
