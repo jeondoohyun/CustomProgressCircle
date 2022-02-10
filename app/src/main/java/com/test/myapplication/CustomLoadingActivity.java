@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 public class CustomLoadingActivity extends AppCompatActivity {
 
-    //66
+    //99
 
     EditText et_1, et_2;
     TextView tv_result;
