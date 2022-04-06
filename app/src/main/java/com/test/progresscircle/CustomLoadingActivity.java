@@ -1,4 +1,4 @@
-package com.test.myapplication;
+package com.test.progresscircle;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;

@@ -1,4 +1,4 @@
-package com.test.myapplication;
+package com.test.progresscircle;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,12 +11,7 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.View;
-
-import androidx.core.app.ActivityCompat;
-
-import com.google.android.material.internal.ViewUtils;
 
 public class ProgressBarCircularIndeterminate extends CustomView{
 

@@ -1,4 +1,4 @@
-package com.test.myapplication;
+package com.test.progresscircle;
 
 import android.content.Context;
 import android.graphics.Canvas;
